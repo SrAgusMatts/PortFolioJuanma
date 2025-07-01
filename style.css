@@ -1,20 +1,28 @@
-html {
-  scroll-behavior: smooth;
-}
+/*===============================
+  Variables y configuración base
+=================================*/
 
 :root {
-  --color-bg: #f8f9fa;
+  --color-bg: #f0f2f5;
   --color-text: #333;
   --color-primary: #1e3a8a;
   --color-accent: #22c55e;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: var(--color-bg);
+  background: linear-gradient(180deg, #f0f2f5 0%, #e6e9ec 100%);
   color: var(--color-text);
 }
+
+/*===============================
+  Header y navegación
+=================================*/
 
 header {
   position: sticky;
@@ -50,7 +58,6 @@ nav a {
   transition: color 0.3s ease;
 }
 
-/* Subrayado animado en hover */
 nav a::after {
   content: '';
   position: absolute;
@@ -72,7 +79,9 @@ nav a:focus::after {
   width: 100%;
 }
 
-/* Seccion INICIO */
+/*===============================
+  Hero / sección inicio
+=================================*/
 
 .hero {
   position: relative;
@@ -93,9 +102,12 @@ nav a:focus::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
   z-index: 0;
+  transition: opacity 0.5s ease-in-out;
 }
+
 
 .hero h2,
 .hero p {
@@ -108,106 +120,239 @@ nav a:focus::after {
     0 0 8px rgba(0, 0, 0, 0.6);
 }
 
-
-/* Tamaños de fuente aumentados */
 .hero h2 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .hero p {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.hero button {
+.cta-button {
   position: relative;
   z-index: 1;
-  background-color: #0d6efd;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
+  padding: 0.85rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 9999px;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
 }
 
-.hero button:hover {
-  background-color: #0b5ed7;
-  transform: scale(1.05);
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.5);
+  background: linear-gradient(135deg, #4338ca, #2563eb);
 }
 
+/*===============================
+  Sección Sobre mí
+=================================*/
 
-.section {
+.sobre-mi {
+  background: linear-gradient(135deg, #f7fafc 0%, #e2e8f0 100%);
   padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
 }
 
-/* Seccion Habilidades*/
-
-.skills {
+.sobre-mi-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.skill {
-  width: 140px;
-  height: 160px;
-  perspective: 1000px;
+.sobre-mi-texto {
+  flex: 1;
+  max-width: 700px;
+  padding-left: 1rem;
+}
+
+.sobre-mi-texto h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--color-accent);
+  padding-left: 0.75rem;
+}
+
+.sobre-mi-texto p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.sobre-mi-texto strong {
+  font-weight: 600;
+  color: #2b6cb0;
+}
+
+.sobre-mi-foto {
+  flex-shrink: 0;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 1rem;
+}
+
+.sobre-mi-foto img {
+  max-width: 500px;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
-.skill-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+.sobre-mi-foto img:hover {
+  transform: scale(1.05);
 }
 
-.skill:hover .skill-inner {
-  transform: rotateY(180deg);
+/* Responsive */
+@media (max-width: 768px) {
+  .sobre-mi-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-mi-texto {
+    flex: 1 1 100%;
+  }
+
+  .sobre-mi-texto h3 {
+    text-align: center;
+  }
+
+  .sobre-mi-foto {
+    flex: 1 1 100%;
+  }
 }
 
+/*===============================
+  Sección genérica
+=================================*/
 
+.section {
+  padding: 3rem 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+}
 
-.skill-front, .skill-back {
-  position: absolute;
-  width: 100%;
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--color-accent);
+  padding-left: 0.75rem;
+}
+
+.section-title::before {
+  content: '';
+  display: block;
+  width: 4px;
   height: 100%;
-  border-radius: 10px;
-  backface-visibility: hidden;
+  background-color: #22c55e;
+  border-radius: 2px;
+}
+
+/*===============================
+  Habilidades
+=================================*/
+
+.skills-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skill-category {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  min-width: 280px;
+  max-width: 340px;
+  flex: 1;
+}
+
+.skill-category h3 {
+  font-size: 18px;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #e2e6ea;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #f1f5f9;
   padding: 1rem;
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
   text-align: center;
 }
 
-.skill-front img {
+.skill-card:hover {
+  transform: scale(1.05);
+  background-color: #e0f2fe;
+}
+
+.skill-card img {
   width: 40px;
   height: 40px;
-  margin-bottom: 0.5rem;
+  object-fit: contain;
+  margin-bottom: 8px;
 }
 
-.skill-front span {
-  font-weight: bold;
+.skill-card i {
+  font-size: 50px;
+  margin-bottom: 8px;
 }
 
-.skill-back {
-  transform: rotateY(180deg);
-  font-size: 0.85rem;
+
+.skill-card span {
+  font-size: 14px;
   color: #333;
 }
 
-
+/*===============================
+  Proyectos
+=================================*/
 
 .grid-proyectos {
   display: grid;
@@ -220,15 +365,67 @@ nav a:focus::after {
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
 }
 
-input, textarea {
+.image-container {
+  display: flex;
+  max-width: 500px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.preview-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preview-img:hover {
+  transform: scale(1.03);
+}
+
+/*===============================
+  Estilado Botones de links
+=================================*/
+
+.cta-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #4f46e5;
+  /* Azul intenso */
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-link:hover {
+  background-color: #4338ca;
+  /* Azul más oscuro al pasar el mouse */
+  transform: scale(1.05);
+}
+
+
+/*===============================
+  Formulario de contacto
+=================================*/
+
+input,
+textarea {
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -242,6 +439,10 @@ input, textarea {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/*===============================
+  Footer
+=================================*/
 
 footer {
   background-color: #212529;
@@ -281,8 +482,10 @@ footer {
   text-decoration: underline;
 }
 
+/*===============================
+  Animaciones
+=================================*/
 
-/* Animaciones */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -294,8 +497,46 @@ footer {
   transform: translateY(0);
 }
 
-.Margenes {
- 
-  font-size: medium;
-  font-family: cursive;
+/*===============================
+  Modales
+=================================*/
+
+/* Modal general */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Imagen del modal */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Botón de cerrar */
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #ccc;
 }

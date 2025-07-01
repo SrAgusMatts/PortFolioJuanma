@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi Portafolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="faviconImage.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="shortcut icon" href="./image/faviconImage.png">
 </head>
 
 <body>
@@ -24,186 +26,133 @@
 
 
   <section id="inicio" class="hero fade-in">
-    <h2>¡Hola! Soy Juanma</h2>
-    <p>Desarrollador web apasionado por crear experiencias digitales modernas.</p>
-    <button onclick="scrollToContacto()">Contáctame</button>
-  </section>
-
-  <section id="sobre-mi" class="section fade-in">
-    <h3>Sobre mí</h3>
-    <div class="Margenes">
-      <p>
-        Soy Juan Manuel Algarbe, desarrollador FullStack con experiencia en el diseño y desarrollo de aplicaciones web
-        modernas, escalables y centradas en el usuario. Me apasiona crear soluciones eficientes que integren tanto el
-        frontend como el backend de forma fluida.
-        <br><br>
-        En el frontend, trabajo con tecnologías como HTML, CSS y JavaScript, utilizando frameworks como React para
-        construir interfaces dinámicas y responsivas. Me enfoco en ofrecer experiencias visuales limpias y funcionales.
-        <br><br>
-        En el backend, desarrollo APIs RESTful utilizando Node.js y .NET, aplicando buenas prácticas de arquitectura y
-        seguridad. También tengo experiencia en bases de datos relacionales, control de versiones con Git y despliegue
-        continuo mediante Azure DevOps.
-      </p>
-    </div>
-  </section>
-
-
-
-
-  <section id="habilidades" class="section fade-in">
-    <h3>Habilidades</h3>
-    <div class="skills">
-      <div class="skill">
-        <div class="skill-inner">
-          <div class="skill-front">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
-            <span>HTML5</span>
-          </div>
-          <div class="skill-back">
-            <p>Lenguaje de marcado para crear contenido web estructurado.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-inner">
-          <div class="skill-front">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
-            <span>CSS3</span>
-          </div>
-          <div class="skill-back">
-            <p>Lenguaje de estilos para diseñar visualmente las páginas web.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-inner">
-          <div class="skill-front">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-              alt="JavaScript" />
-            <span>JavaScript</span>
-          </div>
-          <div class="skill-back">
-            <p>Lenguaje de programación que hace que la web sea interactiva.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-inner">
-          <div class="skill-front">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
-            <span>React</span>
-          </div>
-          <div class="skill-back">
-            <p>Librería de JavaScript para construir interfaces de usuario.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-inner">
-          <div class="skill-front">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
-            <span>Node.js</span>
-          </div>
-          <div class="skill-back">
-            <p>Entorno de ejecución para JavaScript del lado del servidor.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-inner">
-          <div class="skill-front">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
-            <span>MySQL</span>
-          </div>
-          <div class="skill-back">
-            <p>Base de datos relacional que gestiona y organiza la información de tus aplicaciones web.</p>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-inner">
-          <div class="skill-front">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" />
-            <span>C#</span>
-          </div>
-          <div class="skill-back">
-            <p>Lenguaje orientado a objetos usado para crear aplicaciones modernas en múltiples plataformas.</p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="skill">
-        <div class="skill-inner">
-          <div class="skill-front">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET" />
-            <span>.NET</span>
-          </div>
-          <div class="skill-back">
-            <p>Framework de Microsoft para construir aplicaciones web, de escritorio y APIs robustas.</p>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-  </section>
-
-
-
-  <section id="proyectos" class="section fade-in">
-  <h3>Proyectos</h3>
-  <div class="grid-proyectos">
-
-    <div class="card">
-      <h4>Conversor binario-letra</h4>
-      <p>Sitio Web FullStack realizado con el propósito de hacer conversiones de números binarios a letras y viceversa.</p>
-      <p><strong>Tecnologías usadas:</strong> React, CSS3, JavaScript, Node.js, C#, .NET, MySQL</p>
-      <p>
-        <a href="https://github.com/SrAgusMatts/BinaryConverter/tree/master" target="_blank" rel="noopener noreferrer">
-          Ver repositorio en GitHub
-        </a>
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>Generador de contratos automatizado</h4>
-      <p>Aplicación web que permite crear contratos personalizados a partir de formularios interactivos. Diseñada para optimizar el tiempo en la generación de documentos legales.</p>
-      <p><strong>Tecnologías usadas:</strong> HTML5, CSS3, JavaScript</p>
-      <p>
-        <a href="https://github.com/SrAgusMatts/Generador-de-contratos-automatizado" target="_blank" rel="noopener noreferrer">
-          Ver repositorio en GitHub
-        </a>
-      </p>
-    </div>
-
-  </div>
+  <h2>¡Hola! Soy Juanma</h2>
+  <p>Desarrollador web apasionado por crear experiencias digitales modernas.</p>
+  <button class="cta-button" onclick="scrollToContacto()">Contáctame</button>
 </section>
 
 
-  
+  <section id="sobre-mi" class="section fade-in sobre-mi">
+    <div class="sobre-mi-container">
+      <div class="sobre-mi-texto">
+        <h3>Sobre mí</h3>
+        <p>
+          ¡Hola! Soy <strong>Juan Manuel Algarbe</strong>, desarrollador Full Stack con experiencia en el diseño y
+          desarrollo de aplicaciones web modernas, escalables y seguras. Me apasiona crear soluciones digitales que
+          resuelvan problemas reales y aporten valor a las personas y negocios.
+        </p>
+        <p>
+          En el área de <strong>frontend</strong>, trabajo con tecnologías como <strong>HTML</strong>,
+          <strong>CSS</strong> y <strong>JavaScript</strong>, y frameworks como <strong>React</strong> para construir
+          interfaces accesibles, responsivas y centradas en la experiencia de usuario.
+        </p>
+        <p>
+          En <strong>backend</strong>, desarrollo APIs RESTful utilizando <strong>Node.js</strong>,
+          <strong>.NET</strong> y <strong>ASP.NET Core</strong>, aplicando principios de arquitectura limpia y buenas
+          prácticas de seguridad. También tengo experiencia con bases de datos como <strong>SQL Server</strong> y
+          <strong>MySQL</strong>.
+        </p>
+        <p>
+          Manejo herramientas como <strong>Git</strong>, y flujos de integración y despliegue continuo
+          (<strong>CI/CD</strong>) con <strong>Azure DevOps</strong>. Me encanta seguir
+          aprendiendo y aportar soluciones prácticas, eficientes y bien pensadas a cada proyecto.
+        </p>
+      </div>
+      <div class="sobre-mi-foto">
+        <img src="./image/avatar-persona.jpg" alt="Juan Manuel Algarbe Foto" />
+      </div>
+    </div>
+  </section>
+
+
+  <section id="habilidades" class="skills-section">
+    <div class="section-title">
+
+      <h2 class="section-title">Habilidades</h2>
+
+    </div>
+
+    <div class="skills-container">
+
+      <div class="skill-category">
+        <h3><i class="fas fa-check-circle"></i> Aprendidos</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+          <div class="skill-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+          <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+          <div class="skill-card"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
+          <div class="skill-card"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3><i class="fas fa-hourglass-half"></i> En proceso de aprender</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><i class="devicon-react-original colored"></i><span>React</span></div>
+          <div class="skill-card"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+          <div class="skill-card"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+          <div class="skill-card"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3><i class="fas fa-book-reader"></i> Aprendiendo</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><i class="devicon-dot-net-plain colored"></i><span>.NET</span></div>
+          <div class="skill-card"><i class="devicon-dotnetcore-plain colored"></i><span>ASP.NET Core</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="proyectos" class="section fade-in">
+
+    <div class="section-title">
+      <h2>Proyectos</h2>
+    </div>
+
+    <div class="grid-proyectos">
+
+      <div class="card">
+        <h4>Generador de contratos automatizado</h4>
+        <div class="image-container">
+          <img src="./image/proyecto1.png" alt="Vista previa del generador de contratos" class="preview-img">
+        </div>
+        <p>Aplicación web que permite crear contratos personalizados a partir de formularios interactivos. Diseñada para
+          optimizar el tiempo en la generación de documentos legales.</p>
+        <p><strong>Tecnologías usadas:</strong> HTML5, CSS3, JavaScript</p>
+        <p>
+          <a href="https://sragusmatts.github.io/Generador-de-contratos-automatizado/" target="_blank"
+            rel="noopener noreferrer" class="cta-link">
+            🚀 Probar la aplicación en línea
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </section>
 
   <footer id="contacto" class="footer">
-  <div class="footer-container">
-    <div class="footer-section">
-      <h4>CONTACTO</h4>
-      <p>Email: <a href="mailto:juanmaalgarbe@gmail.com">juanmaalgarbe@gmail.com</a></p>
-      <p>Tel: <a href="tel:+543564637862">+54 3564 637862</a></p>
-    </div>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>CONTACTO</h4>
+        <p>Email: <a href="mailto:juanmaalgarbe@gmail.com">juanmaalgarbe@gmail.com</a></p>
+        <p>Tel: <a href="tel:+543564637862">+54 3564 637862</a></p>
+      </div>
 
-    <div class="footer-section">
-      <h4>&copy; 2025 Juan Manuel Algarbe</h4>
-      <p>Todos los derechos reservados.</p>
+      <div class="footer-section">
+        <h4>&copy; 2025 Juan Manuel Algarbe</h4>
+        <p>Todos los derechos reservados.</p>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+
+  <!-- Modal para vista previa de imagen -->
+<div id="modal-preview" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img-modal">
+</div>
 
 
   <script src="script.js"></script>
